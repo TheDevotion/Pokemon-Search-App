@@ -57,7 +57,7 @@ const checkValidPokemon = (validPokemonsArr) => {
 };
 
 const getCurrentPokemon = (url) => {
-  fetch(url)
+  fetch(url.replace("http://", "https://")) // Replacing 'http://' with 'https://'
     .then((response) => response.json())
     .then((data) => {
       currentPokemon = data;

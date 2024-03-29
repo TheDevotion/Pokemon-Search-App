@@ -24,15 +24,14 @@
   --brown2: #9b5200;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--mid-black);
+}
 h1 {
   text-align: center;
   color: var(--super-yellow);
   margin: 1rem;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--mid-black);
 }
 
 .main-container {
@@ -63,7 +62,7 @@ body {
 }
 
 #search-input {
-  width: 66%;
+  width: 55%;
   text-align: center;
   padding: 0.75rem;
   border-radius: 6px;
@@ -72,7 +71,6 @@ body {
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
 }
 
-/* edited some button css from getcssscan.com  */
 #search-button {
   background-color: var(--super-black);
   color: var(--white);
@@ -255,31 +253,31 @@ body {
 /* Media query : */
 
 /* For screens smaller than 480px (small smartphones) */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 480px) {
   .main-container {
-    padding: 0.5rem; /* Adjust padding for smaller screens */
+    width: 97%;
   }
 
   h1 {
     text-align: center;
-    font-size: 1.25rem; /* Adjust heading size */
+    font-size: 1.25rem;
   }
 
   .pokemon-search p {
-    font-size: 1rem; /* Adjust paragraph font size */
+    font-size: 1rem;
   }
 
   .pokemon-display,
   .pokemon-stats {
-    width: 100%; /* Adjust width to fit the screen */
+    width: 95%;
   }
 
   #sprite {
-    width: 58%; /* Adjust sprite size */
+    width: 58%;
   }
 
   #stats-table th,
   #stats-table td {
-    width: auto; /* Allow table cells to take natural width */
+    width: auto;
   }
 }
