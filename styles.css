@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* color palete is from Pokemonpalette.com */
+:root {
+  --white: #f8f8f8;
+  --blue-tint-white: rgb(232, 240, 254);
+  /* blacks */
+  --black: #010000;
+  --mid-black: #000100;
+  --super-black: #000001;
+
+  /* yellows:  */
+  --super-yellow: #f6e652;
+  --yellow1: #f6d63f;
+  --yellow2: #f6de48;
+  --dark-yellow: #f6bd20;
+
+  /* browns */
+  --brown1: #9c5100;
+  --brown2: #9b5200;
+}
+
+h1 {
+  text-align: center;
+  color: var(--super-yellow);
+  margin: 1rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--mid-black);
+}
+
+.main-container {
+  background-color: var(--super-yellow);
+  height: 786px;
+  width: 440px;
+  margin: auto;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* search  */
+.pokemon-search p {
+  font-size: 1.25rem;
+  padding-top: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+}
+.pokemon-search {
+  text-align: center;
+  height: 14%;
+}
+
+#search-input {
+  width: 66%;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+}
+
+/* edited some button css from getcssscan.com  */
+#search-button {
+  background-color: var(--super-black);
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  border-style: none;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background: var(--white);
+  color: var(--super-black);
+}
+
+#search-button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+/* pokemon display  */
+
+.pokemon-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  height: 42%;
+  width: 95%;
+  background-color: var(--blue-tint-white);
+  margin: auto;
+}
+
+.pokemon-id-container {
+  display: flex;
+}
+#pokemon-id {
+  margin-left: 0.5rem;
+}
+
+.weight-height-container {
+  display: flex;
+  gap: 1rem;
+}
+.sprite-container {
+  display: flex;
+  justify-content: center;
+}
+#sprite {
+  width: 50%;
+}
+/* types  */
+
+.type {
+  display: inline-flex;
+
+  height: 2rem;
+  width: 5rem;
+  border-style: none;
+  border-radius: 6px;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+}
+
+/* different colors for different types:  */
+.fire {
+  background-color: #ee8130;
+}
+
+.water {
+  background-color: #6390f0;
+}
+
+.grass {
+  background-color: #7ac74c;
+}
+
+.electric {
+  background-color: #f7d02c;
+}
+
+.normal {
+  background-color: #a8a77a;
+}
+
+.poison {
+  background-color: #a33ea1;
+}
+
+.ghost {
+  background-color: #735797;
+}
+
+.dragon {
+  background-color: #6f35fc;
+}
+
+.fighting {
+  background-color: #c22e28;
+}
+
+.flying {
+  background-color: #a98ff3;
+}
+
+.dark {
+  background-color: #705746;
+}
+
+.rock {
+  background-color: #b6a136;
+}
+
+.ice {
+  background-color: #96d9d6;
+}
+
+.bug {
+  background-color: #a6b91a;
+}
+
+.steel {
+  background-color: #b7b7ce;
+}
+
+.fairy {
+  background-color: #d685ad;
+}
+
+.psychic {
+  background-color: #f95587;
+}
+
+.stellar {
+  background-color: #555555;
+}
+
+.ground {
+  background-color: #e2bf65;
+}
+
+/* stats */
+.pokemon-stats {
+  width: 95%;
+  margin: auto;
+  background-color: var(--white);
+  height: 38%;
+}
+
+#stats-table {
+  padding-top: 4px;
+  width: 95%;
+  margin: auto;
+}
+
+#stats-table tr {
+  background-color: var(--brown1);
+  color: var(--white);
+  margin: auto;
+  height: 2.5rem;
+}
+
+#stats-table th {
+  width: 69%;
+}
+
+#stat-heading {
+  width: 29%;
+}
+
+#stats-table td {
+  width: 29%;
+  text-align: center;
+}
+
+/* Media query : */
+
+/* For screens smaller than 480px (small smartphones) */
+@media only screen and (max-width: 479px) {
+  .main-container {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.25rem; /* Adjust heading size */
+  }
+
+  .pokemon-search p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .pokemon-display,
+  .pokemon-stats {
+    width: 100%; /* Adjust width to fit the screen */
+  }
+
+  #sprite {
+    width: 58%; /* Adjust sprite size */
+  }
+
+  #stats-table th,
+  #stats-table td {
+    width: auto; /* Allow table cells to take natural width */
+  }
+}
